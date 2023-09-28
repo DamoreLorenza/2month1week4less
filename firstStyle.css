@@ -1,0 +1,175 @@
+body{
+    height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: beige;
+}
+
+.lavagna{
+width: 1500px;
+height: 700px;
+border: rgb(112, 65, 26) solid 3em;
+border-radius: 10%;
+background-color:snow ;
+display: flex;
+flex-direction: row;
+flex-wrap:wrap;
+background-color: burlywood;
+
+
+}
+
+article{
+    display: flex;
+flex-direction: row;
+flex-wrap:wrap;
+} 
+
+.box{
+
+border: black solid 0.1em;
+width: 250px;
+height: 200px;
+margin: 2em;
+
+
+}
+
+.post1, .post3{
+    
+    text-align: center;
+    background-color: rgb(232, 255, 81);
+    transform: rotate(10deg);
+    z-index: 1;
+    box-shadow: 0 60px 80px rgba(0,0,0,0.60), 0 45px 26px rgba(0,0,0,0.14);
+}
+.post2, .post5{
+    text-align: center;
+    background-color: rgba(255, 18, 18, 0.878);
+    transform: rotate(-8deg);
+    z-index: 1;
+    box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+}
+.post4, .post6{
+    text-align: center;
+    background-color: rgb(69, 69, 255);
+    transform: rotate(5deg);
+    z-index: 1;
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+.box:hover{
+
+    transform: translate(0.5em,0.5em);
+    z-index: 3;
+
+}   
+
+input{
+font-size: 50px;
+background-color: transparent;
+width: 120px;
+border: transparent;
+font-size: 20px;
+
+}
+ 
+@keyframes firstAnimation{
+  
+    50% {transform: rotate(500deg);}
+    100% {transform: rotate(10deg);}
+}
+@keyframes secondAnimation{
+    50% {transform: rotate(500deg);}
+    100% {transform: rotate(8deg);}
+}
+@keyframes thirdAnimation{
+    
+    50% {transform: rotate(500deg);}
+    100% {transform: rotate(5deg);}
+}
+
+.rotUno{ 
+    animation-name: firstAnimation;
+    animation-duration: 10s;
+   
+}
+.rotDue{
+    animation-name: secondAnimation;
+    animation-duration: 10s;
+}
+.rotTre{
+    animation-name: thirdAnimation;
+    animation-duration: 10s;
+}
+
+
+.footer{
+    border: solid black 5px;
+    margin: 2em;
+    font-size: 30px;
+    width: 500px;
+    padding: 1em;
+}
+
+
+@keyframes parUno {
+    50%{ 
+        opacity: 1;
+        transform: translate(100px, 100px);
+    }
+
+    100% {color: transparent;}
+    
+}
+
+@keyframes parDue {
+    50%{ 
+        color: blue;
+        opacity: 1;
+        transform: translate(100px, 100px);
+    }
+
+    100% {color: transparent;}
+    
+}
+
+@keyframes parTre {
+    50%{ 
+        color: blue;
+        opacity: 1;
+        transform: translate(300px, );
+    }
+
+    100% {color: transparent;}
+    
+}
+
+
+.parolaUno{
+ 
+    color: blue;
+    font-weight: bolder; 
+    animation-name: parUno;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+
+}
+.parolaDue{
+color: blue;
+    font-weight: bolder;
+    color: transparent;
+    animation-name: parDue;
+    animation-duration: 10s;
+    animation-delay: 10s;
+    animation-iteration-count:infinite ;
+}
+
+.parolaTre{
+    color: blue;
+    font-weight: bolder;
+    color: transparent;
+    animation-name: parTre;
+    animation-duration: 12s;
+    animation-delay: 20s;
+    animation-iteration-count:infinite ;
+}
+

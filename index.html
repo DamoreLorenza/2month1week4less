@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <main>
+      <div class="lavagna">
+        <div class="divisore"></div>
+      </div>
+    </main>
+    <article>
+      <div class="box post1">
+        <h2>Task #1</h2>
+        <form><input id="prova" type="text" name="uno" onsubmit="" /></form>
+      </div>
+      <div class="box post2">
+        <h2>Task #2</h2>
+        <input type="text" name="due" />
+      </div>
+      <div class="box post3">
+        <h2>Task #3</h2>
+        <input type="text" name="tre" />
+      </div>
+      <div class="box post4">
+        <h2>Task #4</h2>
+        <input type="text" name="quattro" />
+      </div>
+      <div class="box post5">
+        <h2>Task #5</h2>
+        <input type="text" name="cinque" />
+      </div>
+      <div class="box post6">
+        <h2>Task #6</h2>
+        <input type="text" name="sei" />
+      </div>
+    </article>
+  </body>
+  <script>
+    let schedinaUno = document.getElementsByClassName("box post1")[0];
+    let schedinaDue = document.getElementsByClassName("box post2")[1];
+    let schedinaTre = document.getElementsByClassName("box post3")[2];
+    let schedinaQuattro = document.getElementsByClassName("box post4")[3];
+    let schedinaCinque = document.getElementsByClassName("box post5")[4];
+    let schedinaSei = document.getElementsByClassName("box post6")[5];
+    let lavagna = document.getElementsByClassName("lavagna")[0];
+    let divisore = document.getElementsByClassName("divisore")[0];
+    let vediamo = document.getElementById("prova");
+
+    schedinaUno.addEventListener("submit", function (e) {
+      e.preventDefault();
+      divisore.innerHTML = vediamo.value;
+    });
+  </script>
+</html>
