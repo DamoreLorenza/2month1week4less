@@ -3,7 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
+
+    <link rel="stylesheet" href="firstStyle.css" />
     <title>Document</title>
   </head>
   <body>
@@ -15,44 +16,106 @@
     <article>
       <div class="box post1">
         <h2>Task #1</h2>
-        <form><input id="prova" type="text" name="uno" onsubmit="" /></form>
+        <form><input type="text" name="uno" onsubmit="" /></form>
       </div>
       <div class="box post2">
         <h2>Task #2</h2>
-        <input type="text" name="due" />
+        <form><input type="text" name="due" onsubmit="event" /></form>
       </div>
       <div class="box post3">
         <h2>Task #3</h2>
-        <input type="text" name="tre" />
+        <form><input type="text" name="tre" /></form>
       </div>
       <div class="box post4">
         <h2>Task #4</h2>
-        <input type="text" name="quattro" />
+        <form><input type="text" name="quattro" /></form>
       </div>
       <div class="box post5">
         <h2>Task #5</h2>
-        <input type="text" name="cinque" />
+        <form><input type="text" name="cinque" /></form>
       </div>
       <div class="box post6">
         <h2>Task #6</h2>
-        <input type="text" name="sei" />
+        <form><input type="text" name="sei" /></form>
       </div>
     </article>
+    <footer>
+      <div class="footer">
+        <p>
+          Realizziamo con cura, passione, attenzione, meticolosità, precisione
+          ed un pizzico di originalità <br />
+          <span class="parolaUno">single page app</span> <br />
+          <span class="parolaDue">Interfacce web</span> <br />
+          <span class="parolaTre">App native</span>
+        </p>
+      </div>
+    </footer>
   </body>
   <script>
     let schedinaUno = document.getElementsByClassName("box post1")[0];
-    let schedinaDue = document.getElementsByClassName("box post2")[1];
-    let schedinaTre = document.getElementsByClassName("box post3")[2];
-    let schedinaQuattro = document.getElementsByClassName("box post4")[3];
-    let schedinaCinque = document.getElementsByClassName("box post5")[4];
-    let schedinaSei = document.getElementsByClassName("box post6")[5];
+    let schedinaDue = document.getElementsByClassName("box post2")[0];
+    let schedinaTre = document.getElementsByClassName("box post3")[0];
+    let schedinaQuattro = document.getElementsByClassName("box post4")[0];
+    let schedinaCinque = document.getElementsByClassName("box post5")[0];
+    let schedinaSei = document.getElementsByClassName("box post6")[0];
     let lavagna = document.getElementsByClassName("lavagna")[0];
     let divisore = document.getElementsByClassName("divisore")[0];
-    let vediamo = document.getElementById("prova");
 
     schedinaUno.addEventListener("submit", function (e) {
       e.preventDefault();
-      divisore.innerHTML = vediamo.value;
+      divisore.appendChild(schedinaUno);
+    });
+    schedinaDue.addEventListener("submit", function (e) {
+      e.preventDefault();
+      divisore.appendChild(schedinaDue);
+    });
+    schedinaTre.addEventListener("submit", function (e) {
+      e.preventDefault();
+      divisore.appendChild(schedinaTre);
+    });
+    schedinaQuattro.addEventListener("submit", function (e) {
+      e.preventDefault();
+      divisore.appendChild(schedinaQuattro);
+    });
+    schedinaCinque.addEventListener("submit", function (e) {
+      e.preventDefault();
+      divisore.appendChild(schedinaCinque);
+    });
+    schedinaSei.addEventListener("submit", function (e) {
+      e.preventDefault();
+      divisore.appendChild(schedinaSei);
+    });
+
+    //
+
+    schedinaUno.addEventListener("click", function (e) {
+      e.preventDefault();
+      schedinaUno.classList.add("rotUno");
+    });
+
+    schedinaDue.addEventListener("click", function (e) {
+      e.preventDefault();
+      schedinaDue.classList.add("rotDue");
+    });
+
+    schedinaTre.addEventListener("click", function (e) {
+      e.preventDefault();
+      schedinaTre.classList.add("rotUno");
+    });
+
+    schedinaQuattro.addEventListener("click", function (e) {
+      e.preventDefault();
+      schedinaQuattro.classList.add("rotTre");
+    });
+
+    schedinaCinque.addEventListener("click", function (e) {
+      e.preventDefault();
+      schedinaCinque.classList.add("rotDue");
+    });
+
+    schedinaSei.addEventListener("click", function (e) {
+      e.preventDefault();
+      schedinaSei.classList.add("rotTre");
     });
   </script>
 </html>

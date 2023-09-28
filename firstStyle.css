@@ -71,6 +71,20 @@ border: transparent;
 font-size: 20px;
 
 }
+
+.divisore{
+    width: 835px;
+    height: 436px; 
+   
+margin: 2em;
+display: flex;
+flex-direction: row;
+flex-wrap: wrap;
+ 
+
+}
+
+
  
 @keyframes firstAnimation{
   
